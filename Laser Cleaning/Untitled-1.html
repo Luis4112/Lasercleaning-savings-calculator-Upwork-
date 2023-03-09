@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Laser Cleaning Savings Calculator</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="cascade.css">
+  </head>
+  <body>
+    <h1>Laser Cleaning Savings Calculator</h1>
+    
+    <form class="flex">
+        <h2> You can insert the values here:</h2>
+      <label for="area">Surface area to be cleaned (in square meters):</label>
+      <input type="number" id="area" name="area" min="0" required>
+      
+      <label for="cost-per-square-meter">Cost per square meter of traditional cleaning:</label>
+      <input type="number" id="cost-per-square-meter" name="cost-per-square-meter" min="0" required>
+      
+      <label for="laser-cleaning-cost">Cost per square meter of laser cleaning:</label>
+      <input type="number" id="laser-cleaning-cost" name="laser-cleaning-cost" min="0" required>
+      <h2>Alternatively, you can upload the excel file:</h2>
+      <input type="file" id="file-input" accept=".xlsx, .xls" required>
+      
+      <button type="button" onclick="loadExcel()">Load Excel</button>
+      
+      <button type="button" onclick="calculateSavings()">Calculate Savings</button>
+    </form>
+    
+    <div id="savings-result"></div>
+    
+    <script src="xlsx.full.min.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
+
